@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace image_bluring
 {
@@ -42,9 +41,6 @@ namespace image_bluring
             Bitmap copy = new Bitmap((Bitmap)this.pictureBox1.Image);
             Bitmap result = Blurs.Blur(copy, 2);
             this.pictureBox2.Image = (Image)result;
-            OpenFileDialog ofile = new OpenFileDialog();
-            ofile.InitialDirectory = "C:\\Users";
-            ofile.IsFolderPicker = 
             this.pictureBox2.Image.Save("C:\\Users\\aitko\\Pictures\\555.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
         }
 
